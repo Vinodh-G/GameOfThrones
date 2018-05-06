@@ -51,20 +51,20 @@ class KingsUtil {
         return kings
     }
     
-    private static func scoreFor(king: King, oponent: King, outcome: BattleOutcome) -> (Double, Double) {
-        let kingScore = scoreBoard[king.name] != nil ? scoreBoard[king.name]! : 400.0
-        let opponentScore = scoreBoard[oponent.name] != nil ? scoreBoard[oponent.name]! : 400
+    static func scoreFor(king: King, oponent: King, outcome: BattleOutcome) -> (Double, Double) {
+        let attackerScore = scoreBoard[king.name] != nil ? scoreBoard[king.name]! : 400.0
+        let defenderScore = scoreBoard[oponent.name] != nil ? scoreBoard[oponent.name]! : 400
 
-        let attackerPoints = pow(10, (kingScore / 400))
-        let opponentPoints = pow(10, (opponentScore / 400))
+        let attackerPoints = pow(10, (attackerScore / 400))
+        let defenderPoints = pow(10, (defenderScore / 400))
         
-        let expectedAttackerScore: Double = Double(attackerPoints / (attackerPoints + opponentPoints))
-        let expectedOpponentScore: Double = Double(opponentPoints / (attackerPoints + opponentPoints))
+        let expectedAttackerScore: Double = Double(attackerPoints / (attackerPoints + defenderPoints))
+        let expectedOpponentScore: Double = Double(defenderPoints / (attackerPoints + defenderPoints))
         
         let attackerWon = outcome == .attackerWon ? 1.0 : 0.0
         let opponentWon = outcome == .defenderWon ? 1.0 : 0.0
-        let kingRating = kingScore  + kRatingConst * (attackerWon - expectedAttackerScore)
-        let opponentRating = opponentScore + kRatingConst * (opponentWon - expectedOpponentScore)
+        let kingRating = attackerScore  + kRatingConst * (attackerWon - expectedAttackerScore)
+        let opponentRating = defenderScore + kRatingConst * (opponentWon - expectedOpponentScore)
 
         return (kingRating, opponentRating)
     }
