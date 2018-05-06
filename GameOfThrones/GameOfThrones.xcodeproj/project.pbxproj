@@ -10,7 +10,6 @@
 		8746F4C9209DD0F8003C6940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F4C8209DD0F8003C6940 /* AppDelegate.swift */; };
 		8746F4CB209DD0F8003C6940 /* KingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F4CA209DD0F8003C6940 /* KingsViewController.swift */; };
 		8746F4CE209DD0F8003C6940 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8746F4CC209DD0F8003C6940 /* Main.storyboard */; };
-		8746F4D0209DD0FA003C6940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8746F4CF209DD0FA003C6940 /* Assets.xcassets */; };
 		8746F4D3209DD0FA003C6940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8746F4D1209DD0FA003C6940 /* LaunchScreen.storyboard */; };
 		8746F4DE209DD0FA003C6940 /* GameOfThronesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F4DD209DD0FA003C6940 /* GameOfThronesTests.swift */; };
 		8746F4E9209DD0FA003C6940 /* GameOfThronesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F4E8209DD0FA003C6940 /* GameOfThronesUITests.swift */; };
@@ -29,6 +28,11 @@
 		8746F516209E0089003C6940 /* battles_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 8746F515209E0089003C6940 /* battles_sample.json */; };
 		8746F51C209E2466003C6940 /* KingsViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F51B209E2466003C6940 /* KingsViewModel_Tests.swift */; };
 		8746F51E209ED338003C6940 /* KingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F51D209ED338003C6940 /* KingCell.swift */; };
+		8746F522209EE16E003C6940 /* KingCellModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F521209EE16E003C6940 /* KingCellModel_Tests.swift */; };
+		8746F524209EE196003C6940 /* KingsListView.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8746F523209EE196003C6940 /* KingsListView.xcassets */; };
+		87FFE7F4209EEC59007E8FE6 /* KingsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FFE7F3209EEC59007E8FE6 /* KingsUtil.swift */; };
+		87FFE7F6209EF864007E8FE6 /* KingsImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87FFE7F5209EF864007E8FE6 /* KingsImage.xcassets */; };
+		87FFE7F8209EF949007E8FE6 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FFE7F7209EF948007E8FE6 /* ImageUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +57,6 @@
 		8746F4C8209DD0F8003C6940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8746F4CA209DD0F8003C6940 /* KingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsViewController.swift; sourceTree = "<group>"; };
 		8746F4CD209DD0F8003C6940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8746F4CF209DD0FA003C6940 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8746F4D2209DD0FA003C6940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8746F4D4209DD0FA003C6940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8746F4D9209DD0FA003C6940 /* GameOfThronesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfThronesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +80,11 @@
 		8746F515209E0089003C6940 /* battles_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = battles_sample.json; sourceTree = "<group>"; };
 		8746F51B209E2466003C6940 /* KingsViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsViewModel_Tests.swift; sourceTree = "<group>"; };
 		8746F51D209ED338003C6940 /* KingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingCell.swift; sourceTree = "<group>"; };
+		8746F521209EE16E003C6940 /* KingCellModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingCellModel_Tests.swift; sourceTree = "<group>"; };
+		8746F523209EE196003C6940 /* KingsListView.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = KingsListView.xcassets; sourceTree = "<group>"; };
+		87FFE7F3209EEC59007E8FE6 /* KingsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KingsUtil.swift; path = GameOfThrones/Util/KingsUtil.swift; sourceTree = SOURCE_ROOT; };
+		87FFE7F5209EF864007E8FE6 /* KingsImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = KingsImage.xcassets; path = GameOfThrones/Util/KingsImage.xcassets; sourceTree = SOURCE_ROOT; };
+		87FFE7F7209EF948007E8FE6 /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageUtil.swift; path = GameOfThrones/Util/ImageUtil.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,12 +136,12 @@
 			isa = PBXGroup;
 			children = (
 				8746F4C8209DD0F8003C6940 /* AppDelegate.swift */,
+				87FFE7F2209EEC27007E8FE6 /* Util */,
 				8746F50D209DF297003C6940 /* Parser */,
 				8746F506209DEA48003C6940 /* Core */,
 				8746F4F8209DE955003C6940 /* KingsViewController */,
 				8746F4FF209DE9B1003C6940 /* KingDetailViewController */,
 				8746F4CC209DD0F8003C6940 /* Main.storyboard */,
-				8746F4CF209DD0FA003C6940 /* Assets.xcassets */,
 				8746F4D1209DD0FA003C6940 /* LaunchScreen.storyboard */,
 				8746F4D4209DD0FA003C6940 /* Info.plist */,
 			);
@@ -146,6 +154,7 @@
 				8746F4DD209DD0FA003C6940 /* GameOfThronesTests.swift */,
 				8746F50E209DF5A5003C6940 /* BattleParser_Tests.swift */,
 				8746F51B209E2466003C6940 /* KingsViewModel_Tests.swift */,
+				8746F521209EE16E003C6940 /* KingCellModel_Tests.swift */,
 				8746F515209E0089003C6940 /* battles_sample.json */,
 				8746F510209DF61A003C6940 /* battle_sample.json */,
 				8746F4DF209DD0FA003C6940 /* Info.plist */,
@@ -172,6 +181,7 @@
 				8746F502209DE9F7003C6940 /* KingCellModel.swift */,
 				8746F4FB209DE997003C6940 /* King.swift */,
 				8746F4FD209DE9A5003C6940 /* Battle.swift */,
+				8746F523209EE196003C6940 /* KingsListView.xcassets */,
 			);
 			path = KingsViewController;
 			sourceTree = "<group>";
@@ -200,6 +210,17 @@
 				8746F50B209DF27D003C6940 /* BattleParser.swift */,
 			);
 			path = Parser;
+			sourceTree = "<group>";
+		};
+		87FFE7F2209EEC27007E8FE6 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				87FFE7F3209EEC59007E8FE6 /* KingsUtil.swift */,
+				87FFE7F7209EF948007E8FE6 /* ImageUtil.swift */,
+				87FFE7F5209EF864007E8FE6 /* KingsImage.xcassets */,
+			);
+			name = Util;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +328,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8746F4D3209DD0FA003C6940 /* LaunchScreen.storyboard in Resources */,
-				8746F4D0209DD0FA003C6940 /* Assets.xcassets in Resources */,
+				8746F524209EE196003C6940 /* KingsListView.xcassets in Resources */,
+				87FFE7F6209EF864007E8FE6 /* KingsImage.xcassets in Resources */,
 				8746F4CE209DD0F8003C6940 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,10 +361,12 @@
 				8746F508209DEB61003C6940 /* APICore+Battles.swift in Sources */,
 				8746F4F7209DD48D003C6940 /* KingDetialViewController.swift in Sources */,
 				8746F50A209DEF3D003C6940 /* KingsViewInteractor.swift in Sources */,
+				87FFE7F4209EEC59007E8FE6 /* KingsUtil.swift in Sources */,
 				8746F4CB209DD0F8003C6940 /* KingsViewController.swift in Sources */,
 				8746F4C9209DD0F8003C6940 /* AppDelegate.swift in Sources */,
 				8746F505209DEA3F003C6940 /* APICore.swift in Sources */,
 				8746F4FA209DE979003C6940 /* KingsViewModel.swift in Sources */,
+				87FFE7F8209EF949007E8FE6 /* ImageUtil.swift in Sources */,
 				8746F51E209ED338003C6940 /* KingCell.swift in Sources */,
 				8746F4FC209DE997003C6940 /* King.swift in Sources */,
 				8746F501209DE9DD003C6940 /* KingDetailViewModel.swift in Sources */,
@@ -355,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8746F522209EE16E003C6940 /* KingCellModel_Tests.swift in Sources */,
 				8746F50F209DF5A5003C6940 /* BattleParser_Tests.swift in Sources */,
 				8746F4DE209DD0FA003C6940 /* GameOfThronesTests.swift in Sources */,
 				8746F51C209E2466003C6940 /* KingsViewModel_Tests.swift in Sources */,

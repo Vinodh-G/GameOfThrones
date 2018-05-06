@@ -16,10 +16,10 @@ class KingsViewController: UITableViewController {
         super.viewDidLoad()
         
         guard let kingsVM = viewModel else {  return  }
-        kingsVM.fetchKingsList { [unowned self] (update) in
-            self.tableView.reloadData()
+        kingsVM.fetchKingsList { [weak self] (update) in
+            self?.title = kingsVM.title
+            self?.tableView.reloadData()
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,7 +65,7 @@ extension KingsViewController {
         let cellModel = kingsVM.kingCellModels[indexPath.row]
         cell.cellModel = cellModel
      
-     return cell
+        return cell
      }
 }
 
