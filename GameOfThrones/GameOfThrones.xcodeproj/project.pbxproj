@@ -20,7 +20,7 @@
 		8746F501209DE9DD003C6940 /* KingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F500209DE9DD003C6940 /* KingDetailViewModel.swift */; };
 		8746F503209DE9F7003C6940 /* KingCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F502209DE9F7003C6940 /* KingCellModel.swift */; };
 		8746F505209DEA3F003C6940 /* APICore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F504209DEA3F003C6940 /* APICore.swift */; };
-		8746F508209DEB61003C6940 /* APICore+Battles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F507209DEB61003C6940 /* APICore+Battles.swift */; };
+		8746F508209DEB61003C6940 /* BattlesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F507209DEB61003C6940 /* BattlesAPI.swift */; };
 		8746F50A209DEF3D003C6940 /* KingsViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F509209DEF3D003C6940 /* KingsViewInteractor.swift */; };
 		8746F50C209DF27D003C6940 /* BattleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F50B209DF27D003C6940 /* BattleParser.swift */; };
 		8746F50F209DF5A5003C6940 /* BattleParser_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F50E209DF5A5003C6940 /* BattleParser_Tests.swift */; };
@@ -74,7 +74,7 @@
 		8746F500209DE9DD003C6940 /* KingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingDetailViewModel.swift; sourceTree = "<group>"; };
 		8746F502209DE9F7003C6940 /* KingCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingCellModel.swift; sourceTree = "<group>"; };
 		8746F504209DEA3F003C6940 /* APICore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICore.swift; sourceTree = "<group>"; };
-		8746F507209DEB61003C6940 /* APICore+Battles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APICore+Battles.swift"; sourceTree = "<group>"; };
+		8746F507209DEB61003C6940 /* BattlesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlesAPI.swift; sourceTree = "<group>"; };
 		8746F509209DEF3D003C6940 /* KingsViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsViewInteractor.swift; sourceTree = "<group>"; };
 		8746F50B209DF27D003C6940 /* BattleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleParser.swift; sourceTree = "<group>"; };
 		8746F50E209DF5A5003C6940 /* BattleParser_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleParser_Tests.swift; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				8746F504209DEA3F003C6940 /* APICore.swift */,
-				8746F507209DEB61003C6940 /* APICore+Battles.swift */,
+				8746F507209DEB61003C6940 /* BattlesAPI.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -364,7 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8746F503209DE9F7003C6940 /* KingCellModel.swift in Sources */,
-				8746F508209DEB61003C6940 /* APICore+Battles.swift in Sources */,
+				8746F508209DEB61003C6940 /* BattlesAPI.swift in Sources */,
 				8746F4F7209DD48D003C6940 /* KingDetialViewController.swift in Sources */,
 				8746F50A209DEF3D003C6940 /* KingsViewInteractor.swift in Sources */,
 				87FFE7F4209EEC59007E8FE6 /* KingsUtil.swift in Sources */,

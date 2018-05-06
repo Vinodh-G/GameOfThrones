@@ -20,13 +20,13 @@ struct BattlesResponseParam {
 
 typealias GetBattlesApiResponseCallBack = (_ response: BattlesResponseParam) -> Void
 
-extension APICore {
+class BattlesAPI {
     
     func getBattles(request: BattlesRequestParam, callBack: @escaping GetBattlesApiResponseCallBack) -> Void {
         
         let url = "gotjson"
-        
-        getJsonDataFrom(urlString: url) { (jsonData, error) in
+        let apiCore = APICore()
+        apiCore.getJsonDataFrom(urlString: url) { (jsonData, error) in
             
             guard let data = jsonData else {
                 let repsonse = BattlesResponseParam(json: nil, page: request.page, error: error)

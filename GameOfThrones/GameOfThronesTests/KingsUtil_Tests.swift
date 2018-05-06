@@ -103,9 +103,9 @@ class KingsUtil_Tests: XCTestCase {
     
     func testscoreForKingAndOpponent_verifyCase_attackerwon_once_opponentwon_once() {
         
-        let king = King(inName: "Dolly")
+        let king = King(inName: "Dudely")
         king.score = 400
-        let opponent = King(inName: "Jolly")
+        let opponent = King(inName: "Solly")
         opponent.score = 400
         
         var scores = KingsUtil.scoreFor(king: king, oponent: opponent, outcome: .attackerWon)

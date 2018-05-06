@@ -12,7 +12,7 @@ typealias GetBattlesDetailsCallBack = (_ battles: [Battle]?, _ error: Error?) ->
 
 class KingsViewInteractor {
     
-    private let apiCore = APICore()
+    private let apiCore = BattlesAPI()
     
     func getBattles(callBack:  @escaping GetBattlesDetailsCallBack) {
         let param = BattlesRequestParam(page: 1)
