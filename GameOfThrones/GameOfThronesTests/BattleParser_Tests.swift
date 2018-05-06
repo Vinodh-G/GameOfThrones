@@ -12,7 +12,8 @@ import XCTest
 class BattleParser_Tests: XCTestCase {
     
     var battleJson: [String: Any]!
-    
+    var battlesJson: [[String: Any]]?
+
     override func setUp() {
         super.setUp()
         
@@ -25,10 +26,35 @@ class BattleParser_Tests: XCTestCase {
                 }
             } catch {}
         }
+        
+        if let path = Bundle(for: type(of: self)).url(forResource: "battles_sample", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: path)
+                let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                if let dictionary = object as? [[String: Any]] {
+                    battlesJson = dictionary
+                }
+            } catch {
+                
+            }
+        }
     }
     
     override func tearDown() {
         super.tearDown()
+    }
+    
+    func testbattlesfrom_forSampleJson_verifyBattlesCount() {
+        guard let json = battlesJson else {
+            XCTAssert(false, "sample battles json is invalid");
+            return
+        }
+        
+        guard let battles = BattleParser.battles(from: json) else  {
+            XCTAssert(false, "battles not created from the sample json");
+            return
+        }
+        XCTAssertEqual(battles.count, 12)
     }
     
     func testbattleFromJson_forSampleJson_verifyBattleName() {

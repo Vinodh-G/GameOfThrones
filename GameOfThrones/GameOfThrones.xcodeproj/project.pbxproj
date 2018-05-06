@@ -27,9 +27,8 @@
 		8746F50F209DF5A5003C6940 /* BattleParser_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F50E209DF5A5003C6940 /* BattleParser_Tests.swift */; };
 		8746F511209DF61A003C6940 /* battle_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 8746F510209DF61A003C6940 /* battle_sample.json */; };
 		8746F516209E0089003C6940 /* battles_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 8746F515209E0089003C6940 /* battles_sample.json */; };
-		8746F518209E07BB003C6940 /* KingsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F517209E07BB003C6940 /* KingsParser.swift */; };
-		8746F51A209E0A66003C6940 /* KingsParser_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F519209E0A66003C6940 /* KingsParser_Tests.swift */; };
 		8746F51C209E2466003C6940 /* KingsViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F51B209E2466003C6940 /* KingsViewModel_Tests.swift */; };
+		8746F51E209ED338003C6940 /* KingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746F51D209ED338003C6940 /* KingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +75,8 @@
 		8746F50E209DF5A5003C6940 /* BattleParser_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleParser_Tests.swift; sourceTree = "<group>"; };
 		8746F510209DF61A003C6940 /* battle_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = battle_sample.json; sourceTree = "<group>"; };
 		8746F515209E0089003C6940 /* battles_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = battles_sample.json; sourceTree = "<group>"; };
-		8746F517209E07BB003C6940 /* KingsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsParser.swift; sourceTree = "<group>"; };
-		8746F519209E0A66003C6940 /* KingsParser_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsParser_Tests.swift; sourceTree = "<group>"; };
 		8746F51B209E2466003C6940 /* KingsViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsViewModel_Tests.swift; sourceTree = "<group>"; };
+		8746F51D209ED338003C6940 /* KingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +145,6 @@
 			children = (
 				8746F4DD209DD0FA003C6940 /* GameOfThronesTests.swift */,
 				8746F50E209DF5A5003C6940 /* BattleParser_Tests.swift */,
-				8746F519209E0A66003C6940 /* KingsParser_Tests.swift */,
 				8746F51B209E2466003C6940 /* KingsViewModel_Tests.swift */,
 				8746F515209E0089003C6940 /* battles_sample.json */,
 				8746F510209DF61A003C6940 /* battle_sample.json */,
@@ -171,6 +168,7 @@
 				8746F4CA209DD0F8003C6940 /* KingsViewController.swift */,
 				8746F509209DEF3D003C6940 /* KingsViewInteractor.swift */,
 				8746F4F9209DE979003C6940 /* KingsViewModel.swift */,
+				8746F51D209ED338003C6940 /* KingCell.swift */,
 				8746F502209DE9F7003C6940 /* KingCellModel.swift */,
 				8746F4FB209DE997003C6940 /* King.swift */,
 				8746F4FD209DE9A5003C6940 /* Battle.swift */,
@@ -200,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				8746F50B209DF27D003C6940 /* BattleParser.swift */,
-				8746F517209E07BB003C6940 /* KingsParser.swift */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -346,9 +343,9 @@
 				8746F4C9209DD0F8003C6940 /* AppDelegate.swift in Sources */,
 				8746F505209DEA3F003C6940 /* APICore.swift in Sources */,
 				8746F4FA209DE979003C6940 /* KingsViewModel.swift in Sources */,
+				8746F51E209ED338003C6940 /* KingCell.swift in Sources */,
 				8746F4FC209DE997003C6940 /* King.swift in Sources */,
 				8746F501209DE9DD003C6940 /* KingDetailViewModel.swift in Sources */,
-				8746F518209E07BB003C6940 /* KingsParser.swift in Sources */,
 				8746F50C209DF27D003C6940 /* BattleParser.swift in Sources */,
 				8746F4FE209DE9A5003C6940 /* Battle.swift in Sources */,
 			);
@@ -359,7 +356,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8746F50F209DF5A5003C6940 /* BattleParser_Tests.swift in Sources */,
-				8746F51A209E0A66003C6940 /* KingsParser_Tests.swift in Sources */,
 				8746F4DE209DD0FA003C6940 /* GameOfThronesTests.swift in Sources */,
 				8746F51C209E2466003C6940 /* KingsViewModel_Tests.swift in Sources */,
 			);

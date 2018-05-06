@@ -16,7 +16,7 @@ class KingsViewController: UITableViewController {
         super.viewDidLoad()
         
         guard let kingsVM = viewModel else {  return  }
-        kingsVM.fetchKingsList { [unowned self] (cellModels) in
+        kingsVM.fetchKingsList { [unowned self] (update) in
             self.tableView.reloadData()
         }
         
@@ -59,12 +59,11 @@ extension KingsViewController {
     }
     
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "kingCellIdentifier", for: indexPath) as! KingCell
+        
         guard let kingsVM = viewModel else {  return cell }
         let cellModel = kingsVM.kingCellModels[indexPath.row]
-        
-        cell.textLabel?.text = cellModel.name
-     // Configure the cell...
+        cell.cellModel = cellModel
      
      return cell
      }

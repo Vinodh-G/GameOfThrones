@@ -10,6 +10,17 @@ import Foundation
 
 class BattleParser {
     
+    static func battles(from json: [[String: Any]]) -> [Battle]? {
+        var battles: [Battle] = []
+        for battleJson in json {
+            if let battle = BattleParser.battle(from: battleJson) {
+                battles.append(battle)
+            }
+        }
+        
+        return battles.count > 0 ? battles: nil
+    }
+    
     static func battle(from json: [String: Any]) -> Battle? {
         
         guard let name = json["name"] as? String else {
@@ -18,10 +29,10 @@ class BattleParser {
         guard let battleNumber = json["battle_number"] as? Int else {
             return nil
         }
-        guard let attackerName = json["attacker_king"] as? String else {
+        guard let attackerName = json["attacker_king"] as? String, attackerName.count > 0 else {
             return nil
         }
-        guard let defenderName = json["defender_king"] as? String else {
+        guard let defenderName = json["defender_king"] as? String, defenderName.count > 0 else {
             return nil
         }
         guard let location = json["location"] as? String else {

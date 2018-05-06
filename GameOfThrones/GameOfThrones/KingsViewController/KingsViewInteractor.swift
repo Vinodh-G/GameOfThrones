@@ -8,14 +8,14 @@
 
 import Foundation
 
-typealias GetKingsDetailsCallBack = (_ kings: [King]?, _ error: Error?) -> Void
+typealias GetBattlesDetailsCallBack = (_ battles: [Battle]?, _ error: Error?) -> Void
 
 class KingsViewInteractor {
     
     private let apiCore = APICore()
     
-    func getKings(callBack: @escaping GetKingsDetailsCallBack) {
-
+    
+    func getBattles(callBack:  @escaping GetBattlesDetailsCallBack) {
         let param = BattlesRequestParam(page: 1)
         apiCore.getBattles(request: param) { (response) in
             
@@ -24,11 +24,29 @@ class KingsViewInteractor {
                 return
             }
             
-            guard let kings = KingsParser.createKings(from: validJson) else {
+            guard let battles = BattleParser.battles(from: validJson) else {
                 callBack(nil, response.error )
                 return
             }
-            callBack(kings, nil)
+            callBack(battles, nil)
         }
     }
+    
+//    func getKings(callBack: @escaping GetKingsDetailsCallBack) {
+//
+//        let param = BattlesRequestParam(page: 1)
+//        apiCore.getBattles(request: param) { (response) in
+//
+//            guard let validJson = response.json else {
+//                callBack(nil, response.error )
+//                return
+//            }
+//
+//            guard let kings = KingsParser.createKings(from: validJson) else {
+//                callBack(nil, response.error )
+//                return
+//            }
+//            callBack(kings, nil)
+//        }
+//    }
 }
