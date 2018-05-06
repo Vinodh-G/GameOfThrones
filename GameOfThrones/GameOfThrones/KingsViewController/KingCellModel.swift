@@ -10,7 +10,7 @@ import Foundation
 
 protocol KingCellDetails {
     var name: String { get }
-    var score: String { get set }
+    var score: String { get }
     var totalWins: String { get }
     var numOfAttacks: String { get }
     var numOfDefence: String { get }
@@ -29,7 +29,9 @@ class KingCellModel: KingCellDetails {
         return !king.name.isEmpty ? king.name : "No Data"
     }
     
-    var score: String = ""
+    var score: String {
+        return  String(format: "%.2f", king.score)
+    }
     
     var totalWins: String = ""
     
@@ -38,10 +40,7 @@ class KingCellModel: KingCellDetails {
     var numOfDefence: String = ""
     
     var imageUrl: String = ""
-    
-    private func totalScore() {
-        
-    }
+
     
     private func updateKingsProfileValues() {
         var wins = 0

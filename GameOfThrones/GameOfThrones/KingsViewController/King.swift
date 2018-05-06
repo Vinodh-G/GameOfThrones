@@ -11,7 +11,7 @@ import Foundation
 class King {
     var name: String
     var battles: [Battle] = []
-    var score: Int = 1000
+    var score: Double = 1000
     init(inName: String) {
         name = inName
     }

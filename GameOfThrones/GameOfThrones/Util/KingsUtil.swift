@@ -8,7 +8,11 @@
 
 import Foundation
 
+let kRatingConst = 32.0
+
 class KingsUtil {
+
+    static var scoreBoard: [String: Double] = [:]
     
     static func getKingsList(from battles: [Battle]) -> [King] {
         
@@ -41,23 +45,28 @@ class KingsUtil {
             let scores = scoreFor(king: attacker!, oponent: defender!, outcome: battle.battleOutcome)
             attacker?.score = scores.0
             defender?.score = scores.1
-            
+            scoreBoard[attacker!.name] = attacker?.score
+            scoreBoard[defender!.name] = defender?.score
         }
         return kings
     }
     
-    private static func scoreFor(king: King, oponent: King, outcome: BattleOutcome) -> (Int, Int) {
-//        let kingScore = scoreBoard[king.name] != nil ? scoreBoard[king.name] : 1000
-//        let opponentScore = scoreBoard[oponent.name] != nil ? scoreBoard[oponent.name] : 1000
-//
-//        switch outcome {
-//        case .attackerWon:
-//            return ((opponentScore + 400) / king.battles.count, ())
-//        case .defenderWon:
-//        }
-//
-//        return (opponentScore + 400) / king.battles.count
-        return (1000, 1000)
+    private static func scoreFor(king: King, oponent: King, outcome: BattleOutcome) -> (Double, Double) {
+        let kingScore = scoreBoard[king.name] != nil ? scoreBoard[king.name]! : 400.0
+        let opponentScore = scoreBoard[oponent.name] != nil ? scoreBoard[oponent.name]! : 400
+
+        let attackerPoints = pow(10, (kingScore / 400))
+        let opponentPoints = pow(10, (opponentScore / 400))
+        
+        let expectedAttackerScore: Double = Double(attackerPoints / (attackerPoints + opponentPoints))
+        let expectedOpponentScore: Double = Double(opponentPoints / (attackerPoints + opponentPoints))
+        
+        let attackerWon = outcome == .attackerWon ? 1.0 : 0.0
+        let opponentWon = outcome == .defenderWon ? 1.0 : 0.0
+        let kingRating = kingScore  + kRatingConst * (attackerWon - expectedAttackerScore)
+        let opponentRating = opponentScore + kRatingConst * (opponentWon - expectedOpponentScore)
+
+        return (kingRating, opponentRating)
     }
 
 }
