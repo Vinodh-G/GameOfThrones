@@ -12,32 +12,12 @@ import XCTest
 class BattleParser_Tests: XCTestCase {
     
     var battleJson: [String: Any]!
-    var battlesJson: [[String: Any]]?
+    var battlesJson: [[String: Any]]!
 
     override func setUp() {
         super.setUp()
-        
-        if let path = Bundle(for: type(of: self)).url(forResource: "battle_sample", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: path)
-                let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                if let dictionary = object as? [String: Any] {
-                    battleJson = dictionary
-                }
-            } catch {}
-        }
-        
-        if let path = Bundle(for: type(of: self)).url(forResource: "battles_sample", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: path)
-                let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                if let dictionary = object as? [[String: Any]] {
-                    battlesJson = dictionary
-                }
-            } catch {
-                
-            }
-        }
+        battlesJson = GOTTestUtil.sampleBattlesJson()
+        battleJson = GOTTestUtil.sampleBattleJosn()
     }
     
     override func tearDown() {
@@ -45,12 +25,8 @@ class BattleParser_Tests: XCTestCase {
     }
     
     func testbattlesfrom_forSampleJson_verifyBattlesCount() {
-        guard let json = battlesJson else {
-            XCTAssert(false, "sample battles json is invalid");
-            return
-        }
         
-        guard let battles = BattleParser.battles(from: json) else  {
+        guard let battles = BattleParser.battles(from: battlesJson) else  {
             XCTAssert(false, "battles not created from the sample json");
             return
         }

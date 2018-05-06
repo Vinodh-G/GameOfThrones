@@ -14,7 +14,6 @@ class KingsViewInteractor {
     
     private let apiCore = APICore()
     
-    
     func getBattles(callBack:  @escaping GetBattlesDetailsCallBack) {
         let param = BattlesRequestParam(page: 1)
         apiCore.getBattles(request: param) { (response) in

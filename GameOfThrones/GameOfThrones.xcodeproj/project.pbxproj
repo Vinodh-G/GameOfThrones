@@ -33,6 +33,8 @@
 		87FFE7F4209EEC59007E8FE6 /* KingsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FFE7F3209EEC59007E8FE6 /* KingsUtil.swift */; };
 		87FFE7F6209EF864007E8FE6 /* KingsImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87FFE7F5209EF864007E8FE6 /* KingsImage.xcassets */; };
 		87FFE7F8209EF949007E8FE6 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FFE7F7209EF948007E8FE6 /* ImageUtil.swift */; };
+		87FFE7FA209F01D3007E8FE6 /* KingsUtil_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FFE7F9209F01D3007E8FE6 /* KingsUtil_Tests.swift */; };
+		87FFE7FC209F0302007E8FE6 /* GOTTestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FFE7FB209F0302007E8FE6 /* GOTTestUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		87FFE7F3209EEC59007E8FE6 /* KingsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KingsUtil.swift; path = GameOfThrones/Util/KingsUtil.swift; sourceTree = SOURCE_ROOT; };
 		87FFE7F5209EF864007E8FE6 /* KingsImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = KingsImage.xcassets; path = GameOfThrones/Util/KingsImage.xcassets; sourceTree = SOURCE_ROOT; };
 		87FFE7F7209EF948007E8FE6 /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageUtil.swift; path = GameOfThrones/Util/ImageUtil.swift; sourceTree = SOURCE_ROOT; };
+		87FFE7F9209F01D3007E8FE6 /* KingsUtil_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsUtil_Tests.swift; sourceTree = "<group>"; };
+		87FFE7FB209F0302007E8FE6 /* GOTTestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTTestUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +158,9 @@
 				8746F4DD209DD0FA003C6940 /* GameOfThronesTests.swift */,
 				8746F50E209DF5A5003C6940 /* BattleParser_Tests.swift */,
 				8746F51B209E2466003C6940 /* KingsViewModel_Tests.swift */,
+				87FFE7F9209F01D3007E8FE6 /* KingsUtil_Tests.swift */,
 				8746F521209EE16E003C6940 /* KingCellModel_Tests.swift */,
+				87FFE7FB209F0302007E8FE6 /* GOTTestUtil.swift */,
 				8746F515209E0089003C6940 /* battles_sample.json */,
 				8746F510209DF61A003C6940 /* battle_sample.json */,
 				8746F4DF209DD0FA003C6940 /* Info.plist */,
@@ -383,6 +389,8 @@
 				8746F50F209DF5A5003C6940 /* BattleParser_Tests.swift in Sources */,
 				8746F4DE209DD0FA003C6940 /* GameOfThronesTests.swift in Sources */,
 				8746F51C209E2466003C6940 /* KingsViewModel_Tests.swift in Sources */,
+				87FFE7FC209F0302007E8FE6 /* GOTTestUtil.swift in Sources */,
+				87FFE7FA209F01D3007E8FE6 /* KingsUtil_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

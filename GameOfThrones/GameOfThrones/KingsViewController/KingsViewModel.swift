@@ -29,9 +29,13 @@ class KingsViewModel: KingsListDetails {
     }
     
     var kingCellModels: [KingCellDetails] = []
-    let interactor = KingsViewInteractor()
+    private var interactor = KingsViewInteractor()
     private var scoreBoard: [String: Int] = [:]
 
+    init(inInterator: KingsViewInteractor? = KingsViewInteractor()) {
+        interactor = inInterator!
+    }
+    
     func fetchKingsList(callBack: @escaping FetchKingsCallBack) {
         
         interactor.getBattles { [weak self] (battles, error) in
